@@ -14,7 +14,7 @@ redis_db = Redis() #connect to redis
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Secret!'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:spoonlamp@127.0.0.1:5432/chat_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:[REDACTED]@127.0.0.1:5432/chat_db'
 
 db.init_app(app)
 socketio = SocketIO(app)
